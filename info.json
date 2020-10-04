@@ -1,0 +1,9 @@
+{
+	"name": "factorio-jukebox",
+	"version": "0.0.1",
+	"title": "Jukebox",
+	"description": "Adds a jukebox to play records, just like minecraft.",
+	"author": "asher_sky",
+	"dependencies": ["base >= 1.0.0"],
+	"factorio_version": "1.0"
+}
