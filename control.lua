@@ -1,0 +1,1 @@
+-- on_event(defines.inventory.furnace_source
