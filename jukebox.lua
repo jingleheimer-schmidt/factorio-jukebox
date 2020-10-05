@@ -41,24 +41,52 @@ local jukeboxFurnace = {
   vehicle_impact_sound = sounds.car_wood_impact(0.5),
   animation =
   {
-    filename = "__factorio-jukebox__/graphics/jukebox.png",
-    width = 32,
-    height = 40,
-    line_length = 1,
-    frame_count = 1,
-    -- shift = { -0.03125, -1.71875},
-    animation_speed = 0.5,
-    hr_version = {
-      filename = "__factorio-jukebox__/graphics/hr-jukebox.png",
-      width = 64,
-      height = 80,
+    layers =
+    {
+      filename = "__factorio-jukebox__/graphics/jukebox.png",
+      width = 32,
+      height = 40,
       line_length = 1,
       frame_count = 1,
       -- shift = { -0.03125, -1.71875},
       animation_speed = 0.5,
-      scale = .5
+      hr_version = {
+        filename = "__factorio-jukebox__/graphics/hr-jukebox.png",
+        width = 64,
+        height = 80,
+        line_length = 1,
+        frame_count = 1,
+        -- shift = { -0.03125, -1.71875},
+        animation_speed = 0.5,
+        scale = .5
+      }
+    },
+      {
+        filename = "__base__/graphics/entity/wooden-chest/wooden-chest-shadow.png",
+        priority = "extra-high",
+        width = 52,
+        height = 20,
+        line_length = 1,
+        frame_count = 1,
+        animation_speed = 0.5,
+        shift = util.by_pixel(10, 6.5),
+        draw_as_shadow = true,
+        hr_version =
+        {
+          filename = "__base__/graphics/entity/wooden-chest/hr-wooden-chest-shadow.png",
+          priority = "extra-high",
+          width = 104,
+          height = 40,
+          line_length = 1,
+          frame_count = 1,
+          animation_speed = 0.5,
+          shift = util.by_pixel(10, 6.5),
+          draw_as_shadow = true,
+          scale = 0.5
+        }
+      }
     }
-  },
+  }
   -- picture =
   -- {
   --   layers =
@@ -102,7 +130,6 @@ local jukeboxFurnace = {
   -- circuit_wire_connection_point = circuit_connector_definitions["chest"].points,
   -- circuit_connector_sprites = circuit_connector_definitions["chest"].sprites,
   -- circuit_wire_max_distance = default_circuit_wire_max_distance
-}
 
 data:extend({
   jukeboxItem,
